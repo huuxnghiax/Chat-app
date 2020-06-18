@@ -71,14 +71,14 @@ class ChatHandler {
 	}
 	
 	function newConnectionACK($client_ip_address) {
-		$message = 'Client mới ' . $client_ip_address.' đã kết nối';
+		$message = 'New client ' . $client_ip_address.' joined';
 		$messageArray = array('message'=>$message,'message_type'=>'chat-connection-ack');
 		$ACK = $this->seal(json_encode($messageArray));
 		return $ACK;
 	}
 	
 	function connectionDisconnectACK($client_ip_address) {
-		$message = 'Client ' . $client_ip_address.' ngắt kết nối';
+		$message = 'Client ' . $client_ip_address.' disconnected';
 		$messageArray = array('message'=>$message,'message_type'=>'chat-connection-ack');
 		$ACK = $this->seal(json_encode($messageArray));
 		return $ACK;
