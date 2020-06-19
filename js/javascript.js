@@ -22,7 +22,7 @@ function showMessage(messageHTML) {
                 //Tạo websocket mới
                 //Sử dụng schema ws: vì websocket dùng protocol khác
                 //Tiếp theo là đến host, port, server location
-		var websocket = new WebSocket("ws://localhost:8090/message/php-socket.php"); 
+		var websocket = new WebSocket("ws://localhost:8090/Chat-app/php-socket.php"); 
 		
                 //Event xuất hiện khi thiết lập được kết nối
                 websocket.onopen = function(event) { 
